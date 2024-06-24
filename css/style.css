@@ -554,9 +554,12 @@
   padding: 1rem;
 }
 .site-logo {
-  width: 440px;
+  width: 460px;
   @media (max-width: 530px) {
-    width: 260px;
+    width: 300px;
+  }
+  @media (max-width: 370px) {
+    width: 265px;
   }
 }
 @media (max-width: 991.98px) {
