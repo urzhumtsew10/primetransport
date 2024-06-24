@@ -363,6 +363,9 @@ input[type="radio"]:checked {
 
   p {
     text-align: justify;
+    @media (max-width: 330px) {
+      max-width: 100%;
+    }
   }
 
   @media screen and (min-width: 1001px) {
@@ -553,6 +556,12 @@ input[type="radio"]:checked {
 .section-footer {
   display: flex;
   justify-content: space-between;
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+.footer-heading {
+  text-align: left;
 }
 @media screen and (max-width: 1000px) {
   .odd {
@@ -571,30 +580,43 @@ input[type="radio"]:checked {
   }
 }
 .footer-icons {
-  display: flex;
-  flex-wrap: wrap;
-  a {
-    padding-left: 0rem !important;
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  @media (min-width: 767px) and (max-width: 1000px) {
+    grid-template-columns: repeat(3, 1fr);
   }
-  @media (max-width: 767.5px) {
-    a:nth-child(3) {
-      padding-right: 0rem !important;
-    }
-  }
-  @media (max-width: 339.5px) {
-    a:nth-child(3) {
-      padding-right: 1rem !important;
-    }
-    a:nth-child(2),
-    a:nth-child(4) {
-      padding-right: 0rem !important;
-    }
+  @media (max-width: 767px) {
+    width: 220px;
   }
 }
+.footer-icons a {
+  padding-left: 0rem !important;
+  padding-right: 0rem !important;
+}
 .features-col {
+  margin-left: 0rem !important;
   @media (max-width: 767px) {
     width: fit-content;
     margin-right: calc(25px + (228 - 25) * ((100vw - 360px) / (767 - 360)));
     text-align: center;
   }
+}
+footer {
+  .list-unstyled {
+    display: flex;
+    width: 175px;
+  }
+  .list-unstyled li:first-child {
+    margin-right: 15px;
+  }
+}
+.aboutUs-col {
+  width: 250px;
+  text-align: justify;
+}
+.fiata-img {
+  height: 16px;
 }
