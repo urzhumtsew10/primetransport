@@ -448,6 +448,7 @@ input[type="radio"]:checked {
 
 .img-item {
   margin-bottom: 0;
+  width: 100%;
   @media (min-width: 300px) {
     height: clamp(12.5rem, 50vw + 3.125rem, 25rem);
   }
@@ -498,7 +499,7 @@ input[type="radio"]:checked {
 
 .owl-nav .owl-next {
   position: absolute;
-  right: -25px;
+  right: 0px;
 }
 
 .main-section {
